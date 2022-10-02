@@ -1,0 +1,1808 @@
+{
+    "Regions": [
+        {
+            "id": 1,
+            "owner": "One Man Army Apex",
+            "neighbours": [
+                2,
+                3,
+                4
+            ],
+            "building": "Capital",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 2,
+            "owner": "One Man Army Apex",
+            "neighbours": [
+                1,
+                3,
+                6,
+                7
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 3,
+            "owner": "One Man Army Apex",
+            "neighbours": [
+                1,
+                2,
+                6,
+                4
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 4,
+            "owner": "One Man Army Apex",
+            "neighbours": [
+                1,
+                3,
+                6,
+                5
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 5,
+            "owner": "One Man Army Apex",
+            "neighbours": [
+                2,
+                3,
+                4,
+                7,
+                8
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 6,
+            "owner": "One Man Army Apex",
+            "neighbours": [
+                2,
+                6,
+                9,
+                14,
+                11
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 7,
+            "owner": "One Man Army Apex",
+            "neighbours": [
+                7,
+                6,
+                4,
+                5,
+                9,
+                14
+            ],
+            "building": "None",
+            "water": false,
+            "price": 1
+        },
+        {
+            "id": 8,
+            "owner": "None",
+            "neighbours": [
+                5,
+                10,
+                15,
+                16,
+                8
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 9,
+            "owner": "None",
+            "neighbours": [
+                5,
+                9,
+                15
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 10,
+            "owner": "None",
+            "neighbours": [
+                12,
+                13,
+                7,
+                14
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 11,
+            "owner": "None",
+            "neighbours": [
+                17,
+                11,
+                13
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 12,
+            "owner": "None",
+            "neighbours": [
+                11,
+                12,
+                17,
+                18,
+                14,
+                19
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 13,
+            "owner": "None",
+            "neighbours": [
+                13,
+                7,
+                8,
+                16,
+                20,
+                19
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 14,
+            "owner": "None",
+            "neighbours": [
+                9,
+                10,
+                21
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 15,
+            "owner": "None",
+            "neighbours": [
+                14,
+                8,
+                9,
+                25,
+                24,
+                20
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 16,
+            "owner": "None",
+            "neighbours": [
+                12,
+                13,
+                22,
+                46
+            ],
+            "building": "None",
+            "water": true,
+            "price": 3
+        },
+        {
+            "id": 17,
+            "owner": "None",
+            "neighbours": [
+                13,
+                19,
+                23,
+                22
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 18,
+            "owner": "None",
+            "neighbours": [
+                18,
+                14,
+                20,
+                55,
+                54,
+                23
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 19,
+            "owner": "None",
+            "neighbours": [
+                19,
+                14,
+                16,
+                24,
+                55
+            ],
+            "building": "None",
+            "water": false,
+            "price": 3
+        },
+        {
+            "id": 20,
+            "owner": "None",
+            "neighbours": [
+                15,
+                25
+            ],
+            "building": "None",
+            "water": true,
+            "price": 3
+        },
+        {
+            "id": 21,
+            "owner": "None",
+            "neighbours": [
+                17,
+                18,
+                23,
+                46
+            ],
+            "building": "None",
+            "water": false,
+            "price": 1
+        },
+        {
+            "id": 22,
+            "owner": "None",
+            "neighbours": [
+                22,
+                18,
+                19,
+                54,
+                53,
+                46
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 23,
+            "owner": "None",
+            "neighbours": [
+                20,
+                16,
+                25,
+                56,
+                55
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 24,
+            "owner": "None",
+            "neighbours": [
+                24,
+                16,
+                15,
+                21,
+                56
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 25,
+            "owner": "Kingdom Of Thespians",
+            "neighbours": [
+                28,
+                29
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 26,
+            "owner": "None",
+            "neighbours": [
+                29,
+                35,
+                32
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 27,
+            "owner": "None",
+            "neighbours": [
+                30,
+                26,
+                31,
+                29
+            ],
+            "building": "None",
+            "water": false,
+            "price": 1
+        },
+        {
+            "id": 28,
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
+            "neighbours": [
+                26,
+                28,
+                31,
+                34,
+                35,
+                27
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 29,
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
+            "neighbours": [
+                28,
+                31,
+                33
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 30,
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
+            "neighbours": [
+                28,
+                29,
+                33,
+                34,
+                30
+            ],
+            "building": "Capital",
+            "water": false,
+            "price": 1
+        },
+        {
+            "id": 31,
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
+            "neighbours": [
+                27,
+                35,
+                36
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 32,
+            "owner": "None",
+            "neighbours": [
+                30,
+                31,
+                34,
+                37
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 33,
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
+            "neighbours": [
+                31,
+                29,
+                35,
+                37
+            ],
+            "building": "None",
+            "water": false,
+            "price": 3
+        },
+        {
+            "id": 34,
+            "owner": "None",
+            "neighbours": [
+                29,
+                27,
+                32,
+                34,
+                36,
+                37,
+                38
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 35,
+            "owner": "None",
+            "neighbours": [
+                32,
+                39,
+                40
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 36,
+            "owner": "None",
+            "neighbours": [
+                33,
+                34,
+                35,
+                38
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 37,
+            "owner": "None",
+            "neighbours": [
+                37,
+                35,
+                39,
+                42
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 38,
+            "owner": "None",
+            "neighbours": [
+                36,
+                40,
+                44,
+                43,
+                42,
+                38
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 39,
+            "owner": "None",
+            "neighbours": [
+                36,
+                39,
+                44,
+                41
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 40,
+            "owner": "None",
+            "neighbours": [
+                40,
+                45,
+                52,
+                46
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 41,
+            "owner": "None",
+            "neighbours": [
+                38,
+                39,
+                43,
+                48,
+                47
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 42,
+            "owner": "None",
+            "neighbours": [
+                42,
+                39,
+                50,
+                49,
+                48
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 43,
+            "owner": "None",
+            "neighbours": [
+                39,
+                40,
+                50,
+                45
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 44,
+            "owner": "None",
+            "neighbours": [
+                44,
+                41,
+                52,
+                51
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 45,
+            "owner": "None",
+            "neighbours": [
+                41,
+                52,
+                53,
+                23,
+                22,
+                17
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 46,
+            "owner": "None",
+            "neighbours": [
+                42,
+                48
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 47,
+            "owner": "None",
+            "neighbours": [
+                47,
+                42,
+                43,
+                49
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 48,
+            "owner": "None",
+            "neighbours": [
+                43,
+                48,
+                50
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 49,
+            "owner": "None",
+            "neighbours": [
+                49,
+                43,
+                44,
+                45,
+                51
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 50,
+            "owner": "None",
+            "neighbours": [
+                50,
+                45,
+                52
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 51,
+            "owner": "None",
+            "neighbours": [
+                45,
+                51,
+                41,
+                46,
+                53
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 52,
+            "owner": "None",
+            "neighbours": [
+                52,
+                46,
+                23,
+                57
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 53,
+            "owner": "None",
+            "neighbours": [
+                23,
+                19,
+                55,
+                58,
+                57
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 54,
+            "owner": "Romanum",
+            "neighbours": [
+                54,
+                19,
+                20,
+                24,
+                56,
+                59,
+                58
+            ],
+            "building": "Capital",
+            "water": false,
+            "price": 3
+        },
+        {
+            "id": 55,
+            "owner": "None",
+            "neighbours": [
+                55,
+                24,
+                25,
+                61,
+                60,
+                59
+            ],
+            "building": "None",
+            "water": true,
+            "price": 3
+        },
+        {
+            "id": 56,
+            "owner": "Kingdom Of Thespians",
+            "neighbours": [
+                25,
+                24,
+                55,
+                59,
+                60,
+                62
+            ],
+            "building": "Capital",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 57,
+            "owner": "None",
+            "neighbours": [
+                57,
+                54,
+                55,
+                59,
+                64
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 58,
+            "owner": "None",
+            "neighbours": [
+                58,
+                55,
+                56,
+                60,
+                67
+            ],
+            "building": "None",
+            "water": true,
+            "price": 3
+        },
+        {
+            "id": 59,
+            "owner": "None",
+            "neighbours": [
+                59,
+                56,
+                61,
+                67,
+                69,
+                73
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 60,
+            "owner": "None",
+            "neighbours": [
+                60,
+                56
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 61,
+            "owner": "None",
+            "neighbours": [
+                68,
+                57,
+                63,
+                65
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 62,
+            "owner": "Kingdom Of Pagasia",
+            "neighbours": [
+                62,
+                57,
+                64,
+                66,
+                65
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 63,
+            "owner": "None",
+            "neighbours": [
+                63,
+                64,
+                57,
+                58,
+                67,
+                66
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 64,
+            "owner": "None",
+            "neighbours": [
+                68,
+                62,
+                63,
+                66,
+                70,
+                71
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 65,
+            "owner": "None",
+            "neighbours": [
+                65,
+                63,
+                64,
+                67,
+                69,
+                71
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 66,
+            "owner": "None",
+            "neighbours": [
+                63,
+                64,
+                67,
+                69,
+                65
+            ],
+            "building": "None",
+            "water": false,
+            "price": 3
+        },
+        {
+            "id": 67,
+            "owner": "None",
+            "neighbours": [
+                66,
+                69,
+                64,
+                59,
+                60
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 68,
+            "owner": "Kingdom Of Pagasia",
+            "neighbours": [
+                75,
+                80,
+                62,
+                70,
+                65
+            ],
+            "building": "Capital",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 69,
+            "owner": "None",
+            "neighbours": [
+                71,
+                66,
+                69,
+                67,
+                60,
+                73,
+                72
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 70,
+            "owner": "None",
+            "neighbours": [
+                65,
+                71,
+                91,
+                68
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 71,
+            "owner": "Shadow Dynasty",
+            "neighbours": [
+                66,
+                69,
+                72,
+                93,
+                92,
+                70
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 72,
+            "owner": "Shadow Dynasty",
+            "neighbours": [
+                69,
+                73,
+                74,
+                95,
+                94,
+                93
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 73,
+            "owner": "None",
+            "neighbours": [
+                72,
+                74,
+                69,
+                60
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 74,
+            "owner": "None",
+            "neighbours": [
+                73,
+                72,
+                95
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 75,
+            "owner": "Kingdom Of Pagasia",
+            "neighbours": [
+                80,
+                79,
+                77,
+                68
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 76,
+            "owner": "None",
+            "neighbours": [
+                84,
+                78,
+                77
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 77,
+            "owner": "Kingdom Of Pagasia",
+            "neighbours": [
+                76,
+                78,
+                75
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 78,
+            "owner": "None",
+            "neighbours": [
+                84,
+                76,
+                77,
+                79
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 79,
+            "owner": "None",
+            "neighbours": [
+                84,
+                88,
+                80,
+                75
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 80,
+            "owner": "None",
+            "neighbours": [
+                79,
+                75,
+                68,
+                91,
+                90,
+                89,
+                88
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 81,
+            "owner": "None",
+            "neighbours": [
+                82,
+                83,
+                86,
+                85
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 82,
+            "owner": "None",
+            "neighbours": [
+                81,
+                83,
+                84
+            ],
+            "building": "None",
+            "water": false,
+            "price": 1
+        },
+        {
+            "id": 83,
+            "owner": "None",
+            "neighbours": [
+                81,
+                82,
+                84,
+                87
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 84,
+            "owner": "None",
+            "neighbours": [
+                83,
+                82,
+                76,
+                78,
+                79,
+                88,
+                87
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 85,
+            "owner": "None",
+            "neighbours": [
+                81,
+                86,
+                98,
+                97
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 86,
+            "owner": "None",
+            "neighbours": [
+                85,
+                81,
+                87,
+                99,
+                98
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 87,
+            "owner": "None",
+            "neighbours": [
+                86,
+                83,
+                84,
+                88,
+                99
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 88,
+            "owner": "None",
+            "neighbours": [
+                84,
+                80,
+                79,
+                89,
+                100,
+                87
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 89,
+            "owner": "None",
+            "neighbours": [
+                100,
+                88,
+                80,
+                90,
+                111,
+                110
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 90,
+            "owner": "None",
+            "neighbours": [
+                80,
+                91,
+                101,
+                112,
+                111,
+                89
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 91,
+            "owner": "None",
+            "neighbours": [
+                90,
+                80,
+                70,
+                92,
+                101
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 92,
+            "owner": "Shadow Dynasty",
+            "neighbours": [
+                91,
+                92,
+                71,
+                93,
+                102,
+                101
+            ],
+            "building": "Capital",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 93,
+            "owner": "None",
+            "neighbours": [
+                92,
+                71,
+                72,
+                94,
+                103,
+                102
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 94,
+            "owner": "State Of Sparta",
+            "neighbours": [
+                72,
+                95,
+                105,
+                104,
+                103
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 95,
+            "owner": "State Of Sparta",
+            "neighbours": [
+                94,
+                72,
+                74,
+                106,
+                105
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 96,
+            "owner": "None",
+            "neighbours": [
+                97,
+                107
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 97,
+            "owner": "None",
+            "neighbours": [
+                95,
+                85,
+                98,
+                108,
+                107
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 98,
+            "owner": "Romania",
+            "neighbours": [
+                97,
+                86,
+                99,
+                108
+            ],
+            "building": "Capital",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 99,
+            "owner": "None",
+            "neighbours": [
+                98,
+                86,
+                87,
+                100,
+                109
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 100,
+            "owner": "None",
+            "neighbours": [
+                88,
+                89,
+                110,
+                99
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 101,
+            "owner": "None",
+            "neighbours": [
+                90,
+                91,
+                92,
+                102,
+                112,
+                113
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 102,
+            "owner": "None",
+            "neighbours": [
+                101,
+                92,
+                103,
+                114,
+                113
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 103,
+            "owner": "State Of Sparta",
+            "neighbours": [
+                102,
+                93,
+                94,
+                104,
+                114
+            ],
+            "building": "Capital",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 104,
+            "owner": "State Of Sparta",
+            "neighbours": [
+                103,
+                105,
+                115,
+                118,
+                114,
+                94
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 105,
+            "owner": "None",
+            "neighbours": [
+                94,
+                104,
+                115,
+                106,
+                95
+            ],
+            "building": "None",
+            "water": false,
+            "price": 2
+        },
+        {
+            "id": 106,
+            "owner": "None",
+            "neighbours": [
+                95,
+                115,
+                121
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 107,
+            "owner": "None",
+            "neighbours": [
+                96,
+                97,
+                108
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 108,
+            "owner": "None",
+            "neighbours": [
+                107,
+                97,
+                98,
+                109
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 109,
+            "owner": "None",
+            "neighbours": [
+                107,
+                99,
+                110
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 110,
+            "owner": "None",
+            "neighbours": [
+                109,
+                100,
+                111,
+                89
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 111,
+            "owner": "None",
+            "neighbours": [
+                110,
+                89,
+                112,
+                116
+            ],
+            "building": "None",
+            "water": true
+        },
+        {
+            "id": 112,
+            "owner": "None",
+            "neighbours": [
+                90,
+                101,
+                117,
+                113,
+                116
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 113,
+            "owner": "None",
+            "neighbours": [
+                101,
+                112,
+                117,
+                114,
+                102
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 114,
+            "owner": "None",
+            "neighbours": [
+                117,
+                118,
+                104,
+                103
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 115,
+            "owner": "None",
+            "neighbours": [
+                104,
+                105,
+                106,
+                120,
+                119,
+                118
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 116,
+            "owner": "None",
+            "neighbours": [
+                111,
+                112
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 117,
+            "owner": "None",
+            "neighbours": [
+                112,
+                113,
+                114
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 118,
+            "owner": "State Of Sparta",
+            "neighbours": [
+                114,
+                104,
+                115,
+                119
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 119,
+            "owner": "None",
+            "neighbours": [
+                118,
+                115,
+                120
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 120,
+            "owner": "None",
+            "neighbours": [
+                119,
+                115,
+                106,
+                121,
+                128
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 121,
+            "owner": "Byzantium",
+            "neighbours": [
+                120,
+                106,
+                129,
+                128
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 122,
+            "owner": "None",
+            "neighbours": [
+                123
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 123,
+            "owner": "None",
+            "neighbours": [
+                122,
+                125,
+                126,
+                124
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 124,
+            "owner": "Greek City State Of Phocis",
+            "neighbours": [
+                126,
+                124,
+                127,
+                132
+            ],
+            "building": "Capital",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 125,
+            "owner": "Byzantium",
+            "neighbours": [
+                130,
+                133,
+                134,
+                131,
+                126
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 126,
+            "owner": "Byzantium",
+            "neighbours": [
+                131,
+                125,
+                132,
+                127,
+                123,
+                124
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 127,
+            "owner": "Glowing Phoenix",
+            "neighbours": [
+                126,
+                124,
+                132
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 128,
+            "owner": "None",
+            "neighbours": [
+                120,
+                121,
+                129
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 129,
+            "owner": "Byzantium",
+            "neighbours": [
+                128,
+                121,
+                130,
+                133
+            ],
+            "building": "None",
+            "water": true,
+            "price": 1
+        },
+        {
+            "id": 130,
+            "owner": "Byzantium",
+            "neighbours": [
+                129,
+                133,
+                125
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 131,
+            "owner": "Byzantium",
+            "neighbours": [
+                125,
+                126,
+                132,
+                134
+            ],
+            "building": "Capital",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 132,
+            "owner": "Glowing Phoenix",
+            "neighbours": [
+                131,
+                132,
+                134,
+                127,
+                126
+            ],
+            "building": "Capital",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 133,
+            "owner": "None",
+            "neighbours": [
+                129,
+                130,
+                125,
+                134
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 134,
+            "owner": "Byzantium",
+            "neighbours": [
+                133,
+                125,
+                131,
+                132
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        }
+    ]
+}
