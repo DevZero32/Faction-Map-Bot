@@ -184,11 +184,15 @@ async def on_message(message):
   elif content_prefix == prefix: #prefix recognised & command recognised
       
       roles = message.author.roles
-      user_faction = str(find_faction(roles,Factions))
+
+      #Fa
+    
+      user_faction = str(find_faction(roles,Factions)) 
       if user_faction == "None":
         await message.channel.send("{} You aren't part of a faction.".format(message.author.mention))
       else: 
         faction_index = faction_id(user_faction,Factions)
+        Faction = Factions[faction_index]
         
         #Checking for letters
         ABC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y","Z"]
@@ -199,8 +203,10 @@ async def on_message(message):
             letters = True
         if letters == True:   #checking if letters in id
           await message.channel.send("{} Second word contains letters. Must be a number as it's identfication for the region.".format(message.author.mention))
+        
         elif len(content) >= 3: # is a command. [command + id + definer] ##START COMMANDS HERE## ↓
           content_id = content[1]
+          definer_word = content[2]
           
           region_id = find_region_id(Regions,content_id)
           region = search_region(Regions,region_id)
@@ -211,11 +217,6 @@ async def on_message(message):
             building = region["building"]
             price = float(region["price"])
             water = region["water"]
-            
-            
-            Faction = Factions[faction_index]
-            
-            definer_word = content[2]
             
             #occupy
             if content_word == "region" and definer_word == "occupy":
