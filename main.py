@@ -185,7 +185,7 @@ async def on_message(message):
       
       roles = message.author.roles
 
-      #Fa
+      #Checking Faction
     
       user_faction = str(find_faction(roles,Factions)) 
       if user_faction == "None":
@@ -231,8 +231,6 @@ async def on_message(message):
                     
                     new_manpower = Manpower[faction_index]
                     new_manpower = new_manpower - cost
-                    if faction_index == 0:
-                      new_manpower = float(1)
                     Manpower[faction_index] = new_manpower
                     await message.channel.send("{} You have occupied region {}, using {} Manpower & {} Left.".format(message.author.mention,region_id,cost,new_manpower))
                     channel =  client.get_channel(channel_todo)
