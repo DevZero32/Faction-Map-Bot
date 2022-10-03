@@ -247,7 +247,7 @@ Manpower required to seize: `{}`
           """.format(message.author.mention,region_id,owner,neighbours,building,water,price))
         #Map outside of regions
         if content_word == "map":
-            map_link = "https://cdn.discordapp.com/attachments/1015326293715333170/1026203525333663784/Faction_Map_PNG.png"
+            map_link = "https://cdn.discordapp.com/attachments/1015326293715333170/1026529209465712640/Faction_Map_PND.png"
             await message.channel.send("{} {}.".format(message.author.mention,map_link))
           #close
         if content_word == "close" and str(message.author.id) in Admins:
