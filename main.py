@@ -19,7 +19,8 @@ Admins = ["604817657169969182","440181498344374302","717161731805413470"]
 disconnected = True
 
 def reconnect(disconnected,token):
-  while True and disconnected == True:
+  print("Bot Disconnected")
+  if disconnected == True:
     import discord
     from discord import Intents
     
@@ -160,9 +161,11 @@ async def on_message(message):
     return #exit function
   else:
     ##Commands##
-    commands = ["declare","region","map"] #first word
+    
+    commands = ["declare","region","map","close","test","ping"] #first word
     declare_commands = ["occupy"]
 
+    
     content = split(message)
     content_word = content[0] #Getting first word
     content_prefix = content_word[0] #Getting prefix / very first letter
@@ -206,6 +209,7 @@ async def on_message(message):
             Faction = Factions[faction_index]
             
             definer_word = content[2]
+            
             #Declare
             if content_word == "declare" and definer_word in declare_commands:
               if is_neighbour(Regions,Faction,region_id):
@@ -226,10 +230,12 @@ async def on_message(message):
                 await message.channel.send("{} You arent neighbouring this region.".format(message.author.mention))
             elif content_word == "declare" and definer_word not in declare_commands:
               await message.channel.send("{} `{}` is not regonised as a command; commands for `!declare`: `{}`.".format(message.author.mention,definer_word,declare_commands))
-            #Region Info
-            if content_word == "region" and definer_word == "info":
-              if owner != "None":
-                await message.channel.send("""
+        ##COMMANDS THAT HAVE A LENGTH OF UNDER 3##
+        #Region Info
+        if content_word == "region" and definer_word == "info":
+          if owner == "None":
+             price = price / 2
+          await message.channel.send("""
 {}
 
 __**Region {} info**__
@@ -240,33 +246,23 @@ Building: `{}`
 Port availability: `{}`
 Manpower required to seize: `{}`
                 
-                """.format(message.author.mention,region_id,owner,neighbours,building,water,price))
-            else:
-              price = price / 2
-              await message.channel.send("""
-{}
-
-__**Region {} info**__
-                
-Faction: `{}`
-Neighbours: `{}`
-Building: `{}`
-Port availability: `{}`
-Manpower required to seize: `{}`
-                
-                """.format(message.author.mention,region_id,owner,neighbours,building,water,price))
-          #Map outside of regions
+          """.format(message.author.mention,region_id,owner,neighbours,building,water,price))
+        #Map outside of regions
         if content_word == "map":
-          map_link = "https://cdn.discordapp.com/attachments/1015326293715333170/1026203525333663784/Faction_Map_PNG.png"
-          await message.channel.send("{} {}.".format(message.author.mention,map_link))
-
-  
-  
-  
-  print("on_message over")
+            map_link = "https://cdn.discordapp.com/attachments/1015326293715333170/1026203525333663784/Faction_Map_PNG.png"
+            await message.channel.send("{} {}.".format(message.author.mention,map_link))
+          #close
+        if content_word == "close" and str(message.author.id) in Admins:
+           await message.channel.send("{} Bot closing.".format(message.author.mention))
+           await client.close()
+        elif content_word == "close" and str(message.author.id) not in Admins: 
+          await message.channel.send("{} You do not meet the requirements to run this command.".format(message.author.mention))
+        #test
+        if content_word == "test": await message.channel.send("{} SHUT THE FUCK UP!".format(message.author.mention))
+        #ping
+        if content_word == "ping": await message.channel.send("{} PONG!  `{}ms`.".format(message.author.mention,round(client.latency* 1000)))
 
 load_regions()
 client.run(token)
-time.sleep(30)
-while True:
+while disconnected == True:
   reconnect(disconnected,token)
