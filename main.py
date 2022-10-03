@@ -162,8 +162,6 @@ async def on_message(message):
     ##Commands##
     
     commands = ["declare","region","map","close","test","ping"] #first word
-    declare_commands = ["occupy"]
-
     
     content = split(message)
     content_word = content[0] #Getting first word
@@ -210,7 +208,7 @@ async def on_message(message):
             definer_word = content[2]
             
             #Declare
-            if content_word == "declare" and definer_word in declare_commands:
+            if content_word == "region" and definer_word == "occupy":
               if is_neighbour(Regions,Faction,region_id):
                 if owner == "None" and building == "Fort":
                   cost = float(price * 0.5) + 2
@@ -227,7 +225,7 @@ async def on_message(message):
                     save_regions(Regions,region_id,Faction,building)
               else:
                 await message.channel.send("{} You arent neighbouring this region.".format(message.author.mention))
-            elif content_word == "declare" and definer_word not in declare_commands:
+            elif content_word == "declare" and definer_word != "occupy":
               await message.channel.send("{} `{}` is not regonised as a command; commands for `!declare`: `{}`.".format(message.author.mention,definer_word,declare_commands))
         ##COMMANDS THAT HAVE A LENGTH OF UNDER 3##
         #Region Info
