@@ -177,7 +177,7 @@ async def on_message(message):
       roles = message.author.roles
       user_faction = str(find_faction(roles,Factions))
       if user_faction == "None":
-        await message.channel.send("{} You aren't apart of a faction.".format(message.author.mention))
+        await message.channel.send("{} You aren't part of a faction.".format(message.author.mention))
       else: 
         faction_index = faction_id(user_faction,Factions)
         
@@ -189,7 +189,7 @@ async def on_message(message):
         if content_id in ABC or content_id in abc:
             letters = True
         if letters == True:   #checking if letters in id
-          await message.channel.send("{} Second word contains letters. Must be a number as it is identfication of the region.".format(message.author.mention))
+          await message.channel.send("{} Second word contains letters. Must be a number as it's identfication for the region.".format(message.author.mention))
         elif len(content) >= 3: # is a command. [command + id + definer] ##START COMMANDS HERE## ↓
           content_id = content[1]
           
@@ -216,7 +216,7 @@ async def on_message(message):
                 elif owner == "None": 
                   cost = float(price * 0.5)
                   if cost > float(Manpower[faction_index]):
-                    await message.channel.send("{} You have dont have enough manpower.".format(message.author.mention))
+                    await message.channel.send("{} You have don't have enough manpower.".format(message.author.mention))
                   else:
                     new_manpower = Manpower[faction_index]
                     new_manpower = new_manpower - cost
@@ -225,7 +225,7 @@ async def on_message(message):
                     save_manpower(Manpower)
                     save_regions(Regions,region_id,Faction,building)
               else:
-                await message.channel.send("{} You arent neighbouring this region.".format(message.author.mention))
+                await message.channel.send("{} You aren't neighbouring this region.".format(message.author.mention))
             elif content_word == "declare" and definer_word != "occupy":
               await message.channel.send("{} `{}` is not regonised as a command; commands for `!region`: `occupy`.".format(message.author.mention,definer_word))
         ##COMMANDS THAT HAVE A LENGTH OF UNDER 3##
