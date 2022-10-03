@@ -208,7 +208,7 @@ async def on_message(message):
             
             definer_word = content[2]
             
-            #Declare
+            #occupy
             if content_word == "region" and definer_word == "occupy":
               if is_neighbour(Regions,Faction,region_id):
                 if owner == "None" and building == "Fort":
@@ -227,7 +227,7 @@ async def on_message(message):
               else:
                 await message.channel.send("{} You arent neighbouring this region.".format(message.author.mention))
             elif content_word == "declare" and definer_word != "occupy":
-              await message.channel.send("{} `{}` is not regonised as a command; commands for `!declare`: `{}`.".format(message.author.mention,definer_word,declare_commands))
+              await message.channel.send("{} `{}` is not regonised as a command; commands for `!region`: `occupy`.".format(message.author.mention,definer_word))
         ##COMMANDS THAT HAVE A LENGTH OF UNDER 3##
         #Region Info
         if content_word == "region" and definer_word == "info":
