@@ -708,15 +708,14 @@
         },
         {
             "id": 54,
-            "owner": "Romanums",
+            "owner": "Romanus",
             "neighbours": [
-                54,
+                58,
                 19,
                 20,
                 24,
                 56,
-                59,
-                58
+                59
             ],
             "building": "Capital",
             "water": false,
@@ -768,13 +767,13 @@
         },
         {
             "id": 58,
-            "owner": "None",
+            "owner": "Romanus",
             "neighbours": [
-                58,
+                54,
                 55,
-                56,
-                60,
-                67
+                59,
+                64,
+                57
             ],
             "building": "None",
             "water": true,
