@@ -245,7 +245,7 @@
         },
         {
             "id": 19,
-            "owner": "None",
+            "owner": "Romanus",
             "neighbours": [
                 19,
                 14,
@@ -304,7 +304,6 @@
                 16,
                 25,
                 56,
-                54,
                 55
             ],
             "building": "None",
@@ -404,7 +403,7 @@
         },
         {
             "id": 31,
-            "owner": "S.P.Q.R | Senātus Populusque Rōmānus",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 27,
                 35,
@@ -438,7 +437,7 @@
             ],
             "building": "None",
             "water": false,
-            "price": 1
+            "price": 3
         },
         {
             "id": 34,
@@ -716,7 +715,6 @@
                 20,
                 24,
                 56,
-                23,
                 59
             ],
             "building": "Capital",
@@ -1309,7 +1307,7 @@
         },
         {
             "id": 97,
-            "owner": "None",
+            "owner": "Romania",
             "neighbours": [
                 95,
                 85,
@@ -1601,7 +1599,7 @@
         },
         {
             "id": 119,
-            "owner": "None",
+            "owner": "State Of Sparta",
             "neighbours": [
                 118,
                 115,

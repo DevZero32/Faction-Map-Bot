@@ -18,6 +18,15 @@ prefix = "!"
 Admins = ["604817657169969182","440181498344374302","717161731805413470"]
 disconnected = True
 
+#channels id
+global channel_todo
+global channel_war
+global channel_map
+channel_todo = 1016076988756271135
+channel_war = 1016075320857723051
+channel_map = 1015326293715333170
+
+
 def reconnect(disconnected,token):
   print("Bot Disconnected")
   if disconnected == True:
@@ -218,10 +227,15 @@ async def on_message(message):
                   if cost > float(Manpower[faction_index]):
                     await message.channel.send("{} You have don't have enough manpower.".format(message.author.mention))
                   else:
+                    
                     new_manpower = Manpower[faction_index]
                     new_manpower = new_manpower - cost
+                    if faction_index == 0:
+                      new_manpower = float(1)
                     Manpower[faction_index] = new_manpower
                     await message.channel.send("{} You have occupied region {}, using {} Manpower & {} Left.".format(message.author.mention,region_id,cost,new_manpower))
+                    channel =  client.get_channel(channel_todo)
+                    await channel.send("**__Region {}__** has been taken by {}".format(region_id,Faction))
                     save_manpower(Manpower)
                     save_regions(Regions,region_id,Faction,building)
               else:
