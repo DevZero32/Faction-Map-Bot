@@ -404,7 +404,7 @@
         },
         {
             "id": 31,
-            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
+            "owner": "S.P.Q.R | Senātus Populusque Rōmānus",
             "neighbours": [
                 27,
                 35,
@@ -438,7 +438,7 @@
             ],
             "building": "None",
             "water": false,
-            "price": 3
+            "price": 1
         },
         {
             "id": 34,
