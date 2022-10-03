@@ -34,7 +34,6 @@ def reconnect(disconnected,token):
     time.sleep(60)
 
 #Manpower
-global Manpower
 
 def save_manpower(Manpower):
   db[str(os.environ['manpower'])] = Manpower
