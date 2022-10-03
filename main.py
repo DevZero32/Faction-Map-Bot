@@ -217,28 +217,61 @@ async def on_message(message):
             building = region["building"]
             price = float(region["price"])
             water = region["water"]
+            cost = float(0)
+
             
             #occupy
-            if content_word == "region" and definer_word == "occupy":
-              if is_neighbour(Regions,Faction,region_id):
-                if owner == "None" and building == "Fort":
-                  cost = float(price * 0.5) + 2
-                elif owner == "None": 
-                  cost = float(price * 0.5)
-                  if cost > float(Manpower[faction_index]):
-                    await message.channel.send("{} You have don't have enough manpower.".format(message.author.mention))
+            if content_word == "region" and definer_word == "occupy": 
+                if is_neighbour(Regions,Faction,region_id): 
+                  if owner != "None" and owner != Faction: #region currently owned
+                    if building == "Fort":
+                      cost = 2
+                      cost = cost + price
+                      if cost < Manpower[faction_index]: #checking manpower
+                        channel =  client.get_channel(channel_war)
+                        #Manpower
+                        new_manpower = Manpower[faction_index]
+                        new_manpower = new_manpower - cost
+                        Manpower[faction_index] = new_manpower
+                        #Sending Messages
+                        await message.channel.send("{} You have started a war with {}. Using {} Manpower with {} left.".format(message.author.mention,owner,cost,new_manpower))
+                        await channel.send("""
+__**{} is being attacked by {}**__
+
+{} has 3 days to respond or the node will be taken.
+
+**Region {} info**
+                                
+Region Owner: `{}`
+Neighbours: `{}`
+Building: `{}`
+Port availability: `{}`
+Manpower required to seize: `{}`
+                        
+                        
+                        """.format(owner,Faction,region_id,Faction,neighbours,building,water,price))
+                        
+                        save_manpower(Manpower)
+                      
+                      else:await message.channel.send("{} You have don't have enough manpower.".format(message.author.mention))
                   else:
+                    if building == "Fort":
+                      cost = 2
+                      cost = cost + price
+                    
+                    channel =  client.get_channel(channel_todo)
                     
                     new_manpower = Manpower[faction_index]
                     new_manpower = new_manpower - cost
                     Manpower[faction_index] = new_manpower
+                    
                     await message.channel.send("{} You have occupied region {}, using {} Manpower & {} Left.".format(message.author.mention,region_id,cost,new_manpower))
-                    channel =  client.get_channel(channel_todo)
                     await channel.send("**__Region {}__** has been taken by {}".format(region_id,Faction))
+                    
                     save_manpower(Manpower)
-                    save_regions(Regions,region_id,Faction,building)
-              else:
-                await message.channel.send("{} You aren't neighbouring this region.".format(message.author.mention))
+                    save_regions(Regions,region_id,Faction,building)#Region not owned 
+                else:
+                  await message.channel.send("{} You aren't neighbouring this region.".format(message.author.mention))
             elif content_word == "declare" and definer_word != "occupy":
               await message.channel.send("{} `{}` is not regonised as a command; commands for `!region`: `occupy`.".format(message.author.mention,definer_word))
         ##COMMANDS THAT HAVE A LENGTH OF UNDER 3##
@@ -251,7 +284,7 @@ async def on_message(message):
 
 __**Region {} info**__
                                 
-Faction: `{}`
+Region Owner: `{}`
 Neighbours: `{}`
 Building: `{}`
 Port availability: `{}`
