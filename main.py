@@ -161,13 +161,14 @@ async def on_message(message):
   else:
     ##Commands##
     
-    commands = ["declare","region","map","close","test","ping"] #first word
+    commands = ["declare","region","map","close","test","ping","manpower"] #first word
     
     content = split(message)
     content_word = content[0] #Getting first word
     content_prefix = content_word[0] #Getting prefix / very first letter
     content_word = content_word[1:] #letters after prefix
     content_id = "no content_id"
+    
     if len(content) > 1:
       content_id = content[1]
   if content_word not in commands and content_prefix == prefix : await message.channel.send("{} Command not recognised.".format(message.author.mention)) #Checking if it is inside commands
@@ -258,6 +259,10 @@ Manpower required to seize: `{}`
         if content_word == "test": await message.channel.send("{} SHUT THE FUCK UP!".format(message.author.mention))
         #ping
         if content_word == "ping": await message.channel.send("{} PONG!  `{}ms`.".format(message.author.mention,round(client.latency* 1000)))
+        #manpower
+        if content_word == "manpower": 
+          faction_manpower = Manpower[faction_index]
+          await message.channel.send("{} Your Manpower is `{}`.".format(message.author.mention,faction_manpower))
 
 load_regions()
 client.run(token)
