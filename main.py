@@ -4,8 +4,6 @@ import json
 import time
 
 from discord import Intents
-from replit import db
-
 #Discord Bot
 
 Intents.message_content = True
@@ -42,65 +40,40 @@ def reconnect(disconnected,token):
     disconnected = True
     time.sleep(60)
 
-#Manpower
-
-def save_manpower(Manpower):
-  db[str(os.environ['manpower'])] = Manpower
-  print("Manpower Saved: {}".format(Manpower))
-  
-
-def set_manpower(condition):
-  if condition == True:
-    Manpower = [5,5,5,5,5,5,5,5,5,5,5,5]
-  else: Manpower = []
-  return Manpower
-
-global Manpower
-Manpower = set_manpower(False)
-manpower_key = str(os.environ['manpower'])
-#db[manpower_key] = Manpower
 #Starting and disconnect
 
 @client.event
 async def on_ready():
-  global Manpower
-  Manpower = db[manpower_key]
-  print("Manpower Loaded: {} | User: {} ".format(Manpower,client.user))
+  print("User: {} ".format(client.user))
 
-@client.event
-async def on_disconnect():
-  db[manpower_key] = Manpower
-  print("Manpower Saved: {}".format(Manpower))
+#Factions
 
-#Roles and Factions
+def load_factions():
+  with open("factions.json", "r") as file:
+    global Factions
+    Factions = json.loads(file.read())
+    return Factions
 
-Factions = [
-"State Of Sparta",
-"One Man Army Apex",
-"Banana's Empire",
-"Kingdom Of Pagasia",
-"Glowing Phoenix",
-"Kingdom Of Thespians",
-"Byzantium",
-"S.P.Q.R | Senātus Populusque Rōmānus",
-"Carthage",
-"Shadow Dynasty",
-"Romania",
-"Romanus",
-"Greek City State Of Phocis"
-]
+def save_factions(Factions,faction_name,manpower,permissions):
+  for Faction in Factions["Factions"]:
+    name_json = Faction["faction"]
+    if name_json == faction_name:
+      Faction["manpower"] = manpower
+      Faction["permissions"] = permissions
+      with open("factions.json","w") as file:
+        json.dump(Factions,file,indent = 4)
 
-def find_faction(roles,Factions):
-  user_faction = "None"
-  for i in range(len(roles)):
-    role = roles[i]
-    if str(role) in Factions:
-          user_faction = role
-  return user_faction
+def search_faction(Factions,Roles):
+    for Faction in Factions["Factions"]:
+      faction_name = Faction["faction"]
+      for Role in Roles:
+        if faction_name == str(Role):
+          return Faction
+    return "No faction found"
 
 def faction_id(user_faction,Factions):
   count = 0
-  while Factions[count] != user_faction:
+  while Factions["faction"] != user_faction:
     count = count + 1
   return count
 
@@ -116,18 +89,7 @@ def find_role(id,Admins):
           user_role = "Femboy"
   return user_role
   
-#Region Functions
-
-def is_neighbour(Regions,Faction,id):
-  for Region_selected in Regions["Regions"]:
-    owner = Region_selected["owner"] #each owned region by occupier
-    if owner == Faction:
-      for i in range(len(Region_selected["neighbours"])):
-        neighbour = Region_selected["neighbours"][i]
-        if int(id) == int(neighbour):
-          return True
-  return False
-      
+#Region Functions      
 
 def load_regions():
   with open("regions.json", "r") as file:
@@ -158,6 +120,16 @@ def find_region_id(Regions,id):
     elif found == False: region_id = "no region_id"
   return region_id
 
+def is_neighbour(Regions,Faction,id):
+  for Region_selected in Regions["Regions"]:
+    owner = Region_selected["owner"] #each owned region by occupier
+    if owner == Faction:
+      for i in range(len(Region_selected["neighbours"])):
+        neighbour = Region_selected["neighbours"][i]
+        if int(id) == int(neighbour):
+          return True
+  return False
+
 #Bot things
 def split(message):
   content = message.content.split()
@@ -170,7 +142,9 @@ async def on_message(message):
   else:
     ##Commands##
     
-    commands = ["declare","region","map","close","test","ping","manpower"] #first word
+    commands = ["region","map","close","test","ping","manpower","factions"] #first word
+    region_commands = ["occupy","info"] #region definer words
+
     
     content = split(message)
     content_word = content[0] #Getting first word
@@ -186,13 +160,15 @@ async def on_message(message):
       roles = message.author.roles
 
       #Checking Faction
-    
-      user_faction = str(find_faction(roles,Factions)) 
-      if user_faction == "None":
+      
+      Faction = search_faction(Factions,roles) 
+      if Faction == "No faction found":
         await message.channel.send("{} You aren't part of a faction.".format(message.author.mention))
       else: 
-        faction_index = faction_id(user_faction,Factions)
-        Faction = Factions[faction_index]
+        #Faction
+        faction_name = Faction["faction"]
+        manpower = Faction["manpower"]
+        permissions = Faction["permissions"]
         
         #Checking for letters
         ABC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y","Z"]
@@ -211,31 +187,31 @@ async def on_message(message):
           region_id = find_region_id(Regions,content_id)
           region = search_region(Regions,region_id)
           if region_id == content_id:
-
+            #Regions
             owner = region["owner"]
             neighbours = region["neighbours"]
             building = region["building"]
             price = float(region["price"])
             water = region["water"]
             cost = float(0)
-
             
             #occupy
             if content_word == "region" and definer_word == "occupy": 
-                if is_neighbour(Regions,Faction,region_id): 
-                  if owner != "None" and owner != Faction: #region currently owned
-                    if building == "Fort":
+                if is_neighbour(Regions,faction_name,region_id): 
+                  if owner != "None" and owner != faction_name: #region currently controled
+                    if building == "Fort": #adding to cost is Fort is present
                       cost = 2
-                      cost = cost + price
-                      if cost < Manpower[faction_index]: #checking manpower
-                        channel =  client.get_channel(channel_war)
-                        #Manpower
-                        new_manpower = Manpower[faction_index]
-                        new_manpower = new_manpower - cost
-                        Manpower[faction_index] = new_manpower
-                        #Sending Messages
-                        await message.channel.send("{} You have started a war with {}. Using {} Manpower with {} left.".format(message.author.mention,owner,cost,new_manpower))
-                        await channel.send("""
+                    cost = cost + price
+                    if cost < manpower: #checking manpower
+                      channel =  client.get_channel(channel_war)
+                      #changing manpower
+                      
+                      new_manpower = manpower - cost
+                      manpower = new_manpower
+                      
+                      #Sending Messages
+                      await message.channel.send("{} You have started a war with {}. Using {} Manpower with {} left.".format(message.author.mention,owner,cost,new_manpower))
+                      await channel.send("""
 __**{} is being attacked by {}**__
 
 {} has 3 days to respond or the node will be taken.
@@ -246,34 +222,35 @@ Region Owner: `{}`
 Neighbours: `{}`
 Building: `{}`
 Port availability: `{}`
-Manpower required to seize: `{}`
-                        
-                        
-                        """.format(owner,Faction,region_id,Faction,neighbours,building,water,price))
-                        
-                        save_manpower(Manpower)
+Manpower required to seize: `{}` """.format(owner,faction_name,owner,region_id,owner,neighbours,building,water,price))  
+                      #Saving
+                      save_factions(Factions,faction_name,manpower,permissions)
                       
-                      else:await message.channel.send("{} You have don't have enough manpower.".format(message.author.mention))
-                  else:
-                    if building == "Fort":
+                    else:await message.channel.send("{} You have don't have enough manpower.".format(message.author.mention))
+                  #Nont currently controled
+                  elif owner == "None":
+                    if building == "Fort": #adding to cost is Fort is present
                       cost = 2
-                      cost = cost + price
-                    
-                    channel =  client.get_channel(channel_todo)
-                    
-                    new_manpower = Manpower[faction_index]
-                    new_manpower = new_manpower - cost
-                    Manpower[faction_index] = new_manpower
-                    
-                    await message.channel.send("{} You have occupied region {}, using {} Manpower & {} Left.".format(message.author.mention,region_id,cost,new_manpower))
-                    await channel.send("**__Region {}__** has been taken by {}".format(region_id,Faction))
-                    
-                    save_manpower(Manpower)
-                    save_regions(Regions,region_id,Faction,building)#Region not owned 
+                    cost = cost + (price / 2)
+                    if cost < manpower: #checking manpower:
+                      channel =  client.get_channel(channel_todo)
+
+                      #setting manpower
+                      new_manpower = manpower - cost
+                      manpower = new_manpower
+                      #Sending
+                      await message.channel.send("{} You have occupied region {}, using {} Manpower & {} Left.".format(message.author.mention,region_id,cost,new_manpower))
+                      await channel.send("**__Region {}__** has been taken by {}".format(region_id,faction_name))
+                      #Saving
+                      save_factions(Factions,faction_name,manpower,permissions)
+                      save_regions(Regions,region_id,faction_name,building)#Region not owned 
+                    else: await message.channel.send("{} You have don't have enough manpower.".format(message.author.mention))
+                  else:await message.channel.send("{} You already own this region.".format(message.author.mention))
                 else:
                   await message.channel.send("{} You aren't neighbouring this region.".format(message.author.mention))
-            elif content_word == "declare" and definer_word != "occupy":
-              await message.channel.send("{} `{}` is not regonised as a command; commands for `!region`: `occupy`.".format(message.author.mention,definer_word))
+            elif content_word == "region" and definer_word not in region_commands:
+              await message.channel.send("{} `{}` is not regonised as a command; commands for `!region`  are `{}` .".format(message.author.mention,definer_word,region_commands))
+       
         ##COMMANDS THAT HAVE A LENGTH OF UNDER 3##
         #Region Info
         if content_word == "region" and definer_word == "info":
@@ -301,15 +278,35 @@ Manpower required to seize: `{}`
            await client.close()
         elif content_word == "close" and str(message.author.id) not in Admins: 
           await message.channel.send("{} You do not meet the requirements to run this command.".format(message.author.mention))
-        #test
+        
+          #test
         if content_word == "test": await message.channel.send("{} SHUT THE FUCK UP!".format(message.author.mention))
         #ping
         if content_word == "ping": await message.channel.send("{} PONG!  `{}ms`.".format(message.author.mention,round(client.latency* 1000)))
-        #manpower
+        
+          #manpower
         if content_word == "manpower": 
-          faction_manpower = Manpower[faction_index]
-          await message.channel.send("{} Your Manpower is `{}`.".format(message.author.mention,faction_manpower))
+          await message.channel.send("{} Your Manpower is `{}`.".format(message.author.mention,manpower))
+          #Factions
+        if content_word == "factions":
+          main = ""
+          factiontitle = """
+**__ FACTIONS __**"""
+          for Faction in Factions["Factions"]:
+            faction_name = Faction["faction"]
+            manpower = Faction["manpower"]
+            main = main + (
+"""
 
+Faction: **{}**
+Manpower: **{}**"""
+            .format(faction_name,manpower))
+          embed = discord.Embed(title=factiontitle,description=main,color=discord.Colour.blue())
+          await message.channel.send(embed=embed)
+  
+  print("on_message over")
+
+load_factions()
 load_regions()
 client.run(token)
 while disconnected == True:

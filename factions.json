@@ -1,0 +1,76 @@
+{
+    "Factions": [
+        {
+            "id": 1,
+            "faction": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
+            "manpower": 8.5,
+            "permissions": "Default"
+        },
+        {
+            "id": 2,
+            "faction": "One Man Army Apex",
+            "manpower": 0.0,
+            "permissions": "Default"
+        },
+        {
+            "id": 3,
+            "faction": "Romanus",
+            "manpower": 1.0,
+            "permissions": "Default"
+        },
+        {
+            "id": 4,
+            "faction": "Kingdom Of Thespians",
+            "manpower": 5.5,
+            "permissions": "Default"
+        },
+        {
+            "id": 5,
+            "faction": "Kingdom Of Pagasia",
+            "manpower": 2.5,
+            "permissions": "Default"
+        },
+        {
+            "id": 6,
+            "faction": "Shadow Dynasty",
+            "manpower": 2.0,
+            "permissions": "Default"
+        },
+        {
+            "id": 7,
+            "faction": "Romania",
+            "manpower": 2.0,
+            "permissions": "Default"
+        },
+        {
+            "id": 8,
+            "faction": "State Of Sparta",
+            "manpower": 1.0,
+            "permissions": "Default"
+        },
+        {
+            "id": 9,
+            "faction": "Greek City State Of Phocis",
+            "manpower": 5.0,
+            "permissions": "Default"
+        },
+        {
+            "id": 10,
+            "faction": "Byzantium",
+            "manpower": 0.0,
+            "permissions": "Default"
+        },
+        {
+            "id": 11,
+            "faction": "Glowing Phoenix",
+            "manpower": 4.5,
+            "permissions": "Default"
+        },
+        {
+            "id": 12,
+            "faction": "The Kingdom Of Mycenae",
+            "manpower": 0.5,
+            "permissions": "Default"
+        }
+    ]
+}
