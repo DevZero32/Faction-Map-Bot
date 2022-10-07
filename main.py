@@ -143,7 +143,7 @@ async def on_message(message):
     ##Commands##
     
     commands = ["region","map","close","test","ping","manpower","factions"] #first word
-    region_commands = ["occupy","info"] #region definer words
+    region_commands = ["occupy","info", "build"] #region definer words
 
     
     content = split(message)
@@ -249,6 +249,52 @@ Manpower required to seize: `{}` """.format(owner,faction_name,owner,region_id,o
                   else:await message.channel.send("{} You already own this region.".format(message.author.mention))
                 else:
                   await message.channel.send("{} You aren't neighbouring this region.".format(message.author.mention))
+            
+
+
+            elif content_word == "region" and definer_word == "build":
+
+              content_build = content[3]
+              buildings = ["Port", "Fort", "Village" ]
+              load_regions()
+    
+              if owner != "None" and owner == faction_name: #region currently controlled
+                if content_build != buildings:
+                  await message.channel.send("Fuck off, that's not a building.") #CHANGE THIS
+                  return
+                
+              for i in enumerate(buildings):
+
+                if content_build[i] == 0:
+
+                  print('Port')
+
+                if content_build[i] == 1:
+
+                  print("Fort")
+
+                if content_build == 2:
+
+                  print("Village")
+
+
+
+
+              
+                
+
+
+
+                  
+
+        
+
+
+              
+
+
+
+
             elif content_word == "region" and definer_word not in region_commands:
               await message.channel.send("{} `{}` is not regonised as a command; commands for `!region`  are `{}` .".format(message.author.mention,definer_word,region_commands))
        
