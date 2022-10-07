@@ -197,12 +197,13 @@ async def on_message(message):
             
             #occupy
             if content_word == "region" and definer_word == "occupy": 
+                load_regions()
                 if is_neighbour(Regions,faction_name,region_id): 
                   if owner != "None" and owner != faction_name: #region currently controled
                     if building == "Fort": #adding to cost is Fort is present
                       cost = 2
                     cost = cost + price
-                    if cost < manpower: #checking manpower
+                    if cost <=  manpower: #checking manpower
                       channel =  client.get_channel(channel_war)
                       #changing manpower
                       
@@ -232,7 +233,7 @@ Manpower required to seize: `{}` """.format(owner,faction_name,owner,region_id,o
                     if building == "Fort": #adding to cost is Fort is present
                       cost = 2
                     cost = cost + (price / 2)
-                    if cost < manpower: #checking manpower:
+                    if cost <= manpower: #checking manpower:
                       channel =  client.get_channel(channel_todo)
 
                       #setting manpower
@@ -289,6 +290,7 @@ Manpower required to seize: `{}`
           await message.channel.send("{} Your Manpower is `{}`.".format(message.author.mention,manpower))
           #Factions
         if content_word == "factions":
+          load_factions()
           main = ""
           factiontitle = """
 **__ FACTIONS __**"""

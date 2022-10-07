@@ -137,8 +137,8 @@
             "id": 11,
             "owner": "None",
             "neighbours": [
-                17,
-                11,
+                7,
+                12,
                 13
             ],
             "building": "None",
@@ -162,9 +162,9 @@
         },
         {
             "id": 13,
-            "owner": "None",
+            "owner": "Romanus",
             "neighbours": [
-                13,
+                11,
                 7,
                 8,
                 16,
@@ -177,7 +177,7 @@
         },
         {
             "id": 14,
-            "owner": "None",
+            "owner": "Kingdom Of Thespians",
             "neighbours": [
                 9,
                 10,
@@ -260,7 +260,7 @@
         },
         {
             "id": 20,
-            "owner": "None",
+            "owner": "Kingdom Of Thespians",
             "neighbours": [
                 16,
                 24,
@@ -299,7 +299,7 @@
         },
         {
             "id": 23,
-            "owner": "None",
+            "owner": "Romanus",
             "neighbours": [
                 18,
                 22,
@@ -339,7 +339,7 @@
         },
         {
             "id": 26,
-            "owner": "None",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 29,
                 35,
@@ -351,7 +351,7 @@
         },
         {
             "id": 27,
-            "owner": "None",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 30,
                 26,
@@ -417,7 +417,7 @@
         },
         {
             "id": 32,
-            "owner": "None",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 30,
                 31,
@@ -443,7 +443,7 @@
         },
         {
             "id": 34,
-            "owner": "None",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 29,
                 27,
@@ -459,7 +459,7 @@
         },
         {
             "id": 35,
-            "owner": "None",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 32,
                 39,
@@ -471,7 +471,7 @@
         },
         {
             "id": 36,
-            "owner": "None",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 33,
                 34,
@@ -484,7 +484,7 @@
         },
         {
             "id": 37,
-            "owner": "None",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 37,
                 35,
@@ -497,7 +497,7 @@
         },
         {
             "id": 38,
-            "owner": "None",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 36,
                 40,
@@ -512,7 +512,7 @@
         },
         {
             "id": 39,
-            "owner": "None",
+            "owner": "S.P.Q.R | Sen\u0101tus Populusque R\u014dm\u0101nus",
             "neighbours": [
                 36,
                 39,
@@ -552,7 +552,7 @@
         },
         {
             "id": 42,
-            "owner": "None",
+            "owner": "Banana's Empire",
             "neighbours": [
                 42,
                 39,
@@ -566,7 +566,7 @@
         },
         {
             "id": 43,
-            "owner": "None",
+            "owner": "Banana's Empire",
             "neighbours": [
                 39,
                 40,
@@ -618,23 +618,23 @@
         },
         {
             "id": 47,
-            "owner": "None",
+            "owner": "Banana's Empire",
             "neighbours": [
-                47,
                 42,
                 43,
-                49
+                48
             ],
-            "building": "None",
+            "building": "Capital",
             "water": true,
             "price": 1
         },
         {
             "id": 48,
-            "owner": "None",
+            "owner": "Banana's Empire",
             "neighbours": [
                 43,
-                48,
+                47,
+                49,
                 50
             ],
             "building": "None",
@@ -643,6 +643,18 @@
         },
         {
             "id": 49,
+            "owner": "Banana's Empire",
+            "neighbours": [
+                48,
+                43,
+                50
+            ],
+            "building": "None",
+            "water": true,
+            "price": 2
+        },
+        {
+            "id": 50,
             "owner": "None",
             "neighbours": [
                 49,
@@ -656,7 +668,7 @@
             "price": 2
         },
         {
-            "id": 50,
+            "id": 51,
             "owner": "None",
             "neighbours": [
                 50,
@@ -668,26 +680,13 @@
             "price": 2
         },
         {
-            "id": 51,
-            "owner": "None",
-            "neighbours": [
-                45,
-                51,
-                41,
-                46,
-                53
-            ],
-            "building": "None",
-            "water": true,
-            "price": 2
-        },
-        {
             "id": 52,
             "owner": "None",
             "neighbours": [
-                52,
+                51,
+                41,
                 46,
-                23,
+                53,
                 57
             ],
             "building": "None",
@@ -696,13 +695,12 @@
         },
         {
             "id": 53,
-            "owner": "None",
+            "owner": "Romanus",
             "neighbours": [
-                23,
-                19,
-                55,
-                58,
-                57
+                52,
+                46,
+                57,
+                23
             ],
             "building": "None",
             "water": false,
@@ -712,12 +710,11 @@
             "id": 54,
             "owner": "Romanus",
             "neighbours": [
-                58,
+                23,
                 19,
-                20,
-                24,
                 55,
-                59
+                58,
+                57
             ],
             "building": "Capital",
             "water": false,
@@ -758,11 +755,11 @@
             "id": 57,
             "owner": "Romanus",
             "neighbours": [
+                53,
                 57,
-                54,
-                55,
-                59,
-                64
+                58,
+                63,
+                62
             ],
             "building": "None",
             "water": true,
@@ -772,11 +769,11 @@
             "id": 58,
             "owner": "Romanus",
             "neighbours": [
+                57,
                 54,
                 55,
                 59,
-                64,
-                57
+                64
             ],
             "building": "None",
             "water": true,
@@ -786,12 +783,12 @@
             "id": 59,
             "owner": "Romanus",
             "neighbours": [
-                59,
+                58,
+                55,
                 56,
-                61,
+                60,
                 67,
-                69,
-                73
+                64
             ],
             "building": "None",
             "water": true,
@@ -799,10 +796,13 @@
         },
         {
             "id": 60,
-            "owner": "None",
+            "owner": "Kingdom Of Thespians",
             "neighbours": [
-                60,
-                56
+                59,
+                56,
+                61,
+                67,
+                69
             ],
             "building": "None",
             "water": true,
@@ -810,12 +810,10 @@
         },
         {
             "id": 61,
-            "owner": "None",
+            "owner": "Kingdom Of Thespians",
             "neighbours": [
-                68,
-                57,
-                63,
-                65
+                60,
+                56
             ],
             "building": "None",
             "water": true,
@@ -825,11 +823,11 @@
             "id": 62,
             "owner": "Kingdom Of Pagasia",
             "neighbours": [
-                62,
+                68,
+                65,
+                63,
                 57,
-                64,
-                66,
-                65
+                52
             ],
             "building": "None",
             "water": true,
@@ -839,12 +837,11 @@
             "id": 63,
             "owner": "None",
             "neighbours": [
-                63,
+                62,
+                65,
+                66,
                 64,
-                57,
-                58,
-                67,
-                66
+                57
             ],
             "building": "None",
             "water": true,
@@ -854,12 +851,12 @@
             "id": 64,
             "owner": "None",
             "neighbours": [
-                68,
-                62,
                 63,
+                57,
+                58,
+                67,
                 66,
-                70,
-                71
+                59
             ],
             "building": "None",
             "water": true,
@@ -869,12 +866,12 @@
             "id": 65,
             "owner": "None",
             "neighbours": [
-                65,
-                63,
+                68,
+                70,
+                71,
+                66,
                 64,
-                67,
-                69,
-                71
+                63
             ],
             "building": "None",
             "water": false,
@@ -882,13 +879,12 @@
         },
         {
             "id": 66,
-            "owner": "None",
+            "owner": "Shadow Dynasty",
             "neighbours": [
-                63,
+                65,
                 64,
                 67,
-                69,
-                65
+                69
             ],
             "building": "None",
             "water": false,
@@ -916,7 +912,8 @@
                 80,
                 62,
                 70,
-                65
+                65,
+                77
             ],
             "building": "Capital",
             "water": true,
@@ -969,6 +966,7 @@
             "id": 72,
             "owner": "Shadow Dynasty",
             "neighbours": [
+                71,
                 69,
                 73,
                 74,
@@ -995,7 +993,7 @@
         },
         {
             "id": 74,
-            "owner": "None",
+            "owner": "State Of Sparta",
             "neighbours": [
                 73,
                 72,
@@ -1060,9 +1058,10 @@
             "owner": "None",
             "neighbours": [
                 84,
-                88,
+                78,
+                75,
                 80,
-                75
+                88
             ],
             "building": "None",
             "water": true,
@@ -1238,7 +1237,8 @@
                 80,
                 70,
                 92,
-                101
+                101,
+                112
             ],
             "building": "None",
             "water": false,
@@ -1249,7 +1249,6 @@
             "owner": "Shadow Dynasty",
             "neighbours": [
                 91,
-                92,
                 71,
                 93,
                 102,
@@ -1282,7 +1281,8 @@
                 95,
                 105,
                 104,
-                103
+                103,
+                93
             ],
             "building": "None",
             "water": true,
@@ -1317,7 +1317,7 @@
             "id": 97,
             "owner": "Romania",
             "neighbours": [
-                95,
+                96,
                 85,
                 98,
                 108,
@@ -1332,6 +1332,7 @@
             "owner": "Romania",
             "neighbours": [
                 97,
+                85,
                 86,
                 99,
                 108
@@ -1342,7 +1343,7 @@
         },
         {
             "id": 99,
-            "owner": "None",
+            "owner": "Romania",
             "neighbours": [
                 98,
                 86,
@@ -1388,6 +1389,7 @@
             "neighbours": [
                 101,
                 92,
+                93,
                 103,
                 114,
                 113
@@ -1427,12 +1429,7 @@
         },
         {
             "id": 105,
-            "owner": {
-                "id": 8,
-                "faction": "State Of Sparta",
-                "manpower": 2.0,
-                "permissions": "Default"
-            },
+            "owner": "State Of Sparta",
             "neighbours": [
                 94,
                 104,
@@ -1451,7 +1448,8 @@
                 95,
                 115,
                 121,
-                105
+                105,
+                120
             ],
             "building": "None",
             "water": true,
@@ -1459,14 +1457,7 @@
         },
         {
             "id": 107,
-            "owner": {
-                "id": 7,
-                "faction": "Romania",
-                "manpower": 0.5,
-                "permissions": "Default",
-                "name": "Romania",
-                "building": "Default"
-            },
+            "owner": "Romania",
             "neighbours": [
                 96,
                 97,
@@ -1493,7 +1484,7 @@
             "id": 109,
             "owner": "None",
             "neighbours": [
-                107,
+                108,
                 99,
                 110
             ],
@@ -1507,8 +1498,7 @@
             "neighbours": [
                 109,
                 100,
-                111,
-                89
+                111
             ],
             "building": "None",
             "water": true,
@@ -1520,6 +1510,7 @@
             "neighbours": [
                 110,
                 89,
+                90,
                 112,
                 116
             ],
@@ -1534,7 +1525,8 @@
                 101,
                 117,
                 113,
-                116
+                116,
+                111
             ],
             "building": "None",
             "water": true,
@@ -1556,12 +1548,14 @@
         },
         {
             "id": 114,
-            "owner": "None",
+            "owner": "State Of Sparta",
             "neighbours": [
                 117,
                 118,
                 104,
-                103
+                103,
+                102,
+                113
             ],
             "building": "None",
             "water": true,
@@ -1569,12 +1563,7 @@
         },
         {
             "id": 115,
-            "owner": {
-                "id": 8,
-                "faction": "State Of Sparta",
-                "manpower": 2.0,
-                "permissions": "Default"
-            },
+            "owner": "State Of Sparta",
             "neighbours": [
                 104,
                 105,
@@ -1659,9 +1648,9 @@
             "owner": "Byzantium",
             "neighbours": [
                 120,
-                106,
-                129,
-                128
+                128,
+                119,
+                115
             ],
             "building": "None",
             "water": true,
@@ -1669,7 +1658,7 @@
         },
         {
             "id": 122,
-            "owner": "None",
+            "owner": "Greek City State Of Phocis",
             "neighbours": [
                 123
             ],
@@ -1679,7 +1668,7 @@
         },
         {
             "id": 123,
-            "owner": "None",
+            "owner": "Greek City State Of Phocis",
             "neighbours": [
                 122,
                 125,
@@ -1710,7 +1699,8 @@
                 133,
                 134,
                 131,
-                126
+                126,
+                123
             ],
             "building": "None",
             "water": true,
@@ -1745,7 +1735,7 @@
         },
         {
             "id": 128,
-            "owner": "None",
+            "owner": "Byzantium",
             "neighbours": [
                 120,
                 121,
@@ -1798,7 +1788,6 @@
             "owner": "Glowing Phoenix",
             "neighbours": [
                 131,
-                132,
                 134,
                 127,
                 126
@@ -1809,7 +1798,7 @@
         },
         {
             "id": 133,
-            "owner": "None",
+            "owner": "Byzantium",
             "neighbours": [
                 129,
                 130,
